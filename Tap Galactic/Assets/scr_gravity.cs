@@ -9,6 +9,7 @@ public class scr_gravity : MonoBehaviour
     public GameObject planet;
     private Vector2 velocity;
     private float speed = 10f;
+    private float planetRange = 1.33f;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,16 @@ public class scr_gravity : MonoBehaviour
 
         rb.MoveRotation(Mathf.Atan2(targetRot.y,targetRot.x) * Mathf.Rad2Deg - 90f);
 
-        if (Vector2.Distance(pos, planetPos) > 1.33f)
+        if (Vector2.Distance(pos, planetPos) > planetRange)
         {
+            planetRange = 1.33f;
             rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
 
             velocity = Vector2.ClampMagnitude( (planetPos - pos).normalized * speed, 4f);
+        }
+        else
+        {
+            planetRange = 2f;
         }
     }
 }

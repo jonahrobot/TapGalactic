@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7298333044335036347}
   - component: {fileID: 7298333044335036346}
   - component: {fileID: 8911764079643440991}
+  - component: {fileID: 6732959676559311433}
   m_Layer: 0
   m_Name: obj_player
   m_TagString: Untagged
@@ -142,5 +143,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3c387a3b22486a4c9410227a940654c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planet: {fileID: 0}
+--- !u!114 &6732959676559311433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7298333044335036348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823451291cb1fff4cb134030f5f0bfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
