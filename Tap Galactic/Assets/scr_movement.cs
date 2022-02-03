@@ -6,7 +6,7 @@ public class scr_movement : MonoBehaviour
 {
 
     private Rigidbody2D rb;
-    private bool moveDir = false;
+    private int moveDir = -1;
     public GameObject planet;
     private float speed = 20f;
 
@@ -19,15 +19,16 @@ public class scr_movement : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            moveDir = !moveDir;
+            if (moveDir == -1) { moveDir = 1; }
+            else { moveDir = -1; }
         }
     }
 
-
     private void FixedUpdate()
     {
+        
+        float firstRot = (rb.rotation % 360f + 96.15f * moveDir) * Mathf.PI / 180f; //96.15f
 
-        float firstRot = (rb.rotation % 360f +100f) * Mathf.PI / 180f;
         Vector2 pos = transform.position;
         Vector2 planetPos = planet.transform.position;
 
