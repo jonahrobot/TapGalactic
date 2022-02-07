@@ -135,3 +135,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 2252289466617987418, guid: e29fca6fa2b9d9f4ca445261f97ed688, type: 3}
+  counter: {fileID: 6437122866760893814, guid: 76b936321e461764ea12d12074a0e451, type: 3}

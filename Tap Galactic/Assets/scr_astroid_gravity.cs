@@ -13,13 +13,13 @@ public class scr_astroid_gravity : MonoBehaviour
     private float planetRange;
     private bool notSet = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         velocity = new Vector2(0f, -1f);
         planetRange = planet.GetComponent<CircleCollider2D>().radius * planet.transform.localScale.x; //radius of planet
-        print(planetRange);
     }
 
     // Update is called once per frame
@@ -45,7 +45,8 @@ public class scr_astroid_gravity : MonoBehaviour
             }
             if(notSet == false) {
 
-                StartCoroutine(kill());  
+                StartCoroutine(kill());
+             
                 notSet = true; 
             }
         }

@@ -8,7 +8,7 @@ public class scr_movement : MonoBehaviour
     private Rigidbody2D rb;
     private int moveDir = -1;
     public GameObject planet;
-    private float speed = 4f;
+    private float speed = 2f;
     private bool State_stopMoving = false;
     private bool State_spinOut = false;
     private Vector3 targetRot;
