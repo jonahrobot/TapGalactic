@@ -17,6 +17,9 @@ public class scr_saw_movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if ((transform.position.x > 0 && transform.position.y > 0) || (transform.position.x < 0 && transform.position.y < 0)) { 
+            moveDir = 1; 
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,7 +58,7 @@ public class scr_saw_movement : MonoBehaviour
 
     private IEnumerator kill()
     {
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(0.55f);
         if (hit)
         {
             hit = false;
