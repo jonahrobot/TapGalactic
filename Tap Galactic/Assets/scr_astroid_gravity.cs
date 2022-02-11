@@ -43,18 +43,6 @@ public class scr_astroid_gravity : MonoBehaviour
             {
                 transform.position = a.normalized * planetRange;
             }
-            if(notSet == false) {
-
-                StartCoroutine(kill());
-             
-                notSet = true; 
-            }
         }
-    }
-
-    private IEnumerator kill()
-    {
-        yield return new WaitForSeconds(0.75f);
-        Destroy(gameObject);
     }
 }

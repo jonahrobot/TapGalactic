@@ -16,10 +16,16 @@ public class scr_spawn_meteors : MonoBehaviour
 
     private IEnumerator spawnMeteor()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
 
         //create it
-        float angle = Random.Range(0f, 360f);
+        int angleType = Random.Range(0, 2); // 0 1 
+        float angle = Random.Range(45f, 135f);
+
+        if (angleType == 0) { angle = Random.Range(225f, 315f); }
+
+        angle *= Mathf.Deg2Rad;
+
         float distanceFromCenter = 5f;
         float x = distanceFromCenter * Mathf.Cos(angle) + planet.transform.position.x;
         float y = distanceFromCenter * Mathf.Sin(angle) + planet.transform.position.y;

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4071039753815128084}
   - component: {fileID: 4071039753815128072}
   - component: {fileID: 4071039753815128073}
+  - component: {fileID: 8136221737467769599}
   m_Layer: 0
   m_Name: obj_meteor
   m_TagString: enemy
@@ -135,4 +136,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 2252289466617987418, guid: e29fca6fa2b9d9f4ca445261f97ed688, type: 3}
-  counter: {fileID: 6437122866760893814, guid: 76b936321e461764ea12d12074a0e451, type: 3}
+--- !u!114 &8136221737467769599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4071039753815128087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf9144d1b1241c4e99504999d9355b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
